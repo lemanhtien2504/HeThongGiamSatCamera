@@ -39,8 +39,6 @@ namespace Camera
             this.txtTenCamera = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtViTri = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
@@ -57,6 +55,8 @@ namespace Camera
             this.label6 = new System.Windows.Forms.Label();
             this.txtRtspUrl = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtMadonvihanhchinh = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgviewDanhSachCamera)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +83,7 @@ namespace Camera
             // btQuayLai
             // 
             this.btQuayLai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btQuayLai.Location = new System.Drawing.Point(984, 352);
+            this.btQuayLai.Location = new System.Drawing.Point(984, 341);
             this.btQuayLai.Name = "btQuayLai";
             this.btQuayLai.Size = new System.Drawing.Size(100, 50);
             this.btQuayLai.TabIndex = 10;
@@ -94,7 +94,7 @@ namespace Camera
             // btXoa
             // 
             this.btXoa.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.Location = new System.Drawing.Point(878, 352);
+            this.btXoa.Location = new System.Drawing.Point(878, 341);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 50);
             this.btXoa.TabIndex = 9;
@@ -105,7 +105,7 @@ namespace Camera
             // btSua
             // 
             this.btSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.Location = new System.Drawing.Point(772, 352);
+            this.btSua.Location = new System.Drawing.Point(772, 341);
             this.btSua.Name = "btSua";
             this.btSua.Size = new System.Drawing.Size(100, 50);
             this.btSua.TabIndex = 8;
@@ -116,7 +116,7 @@ namespace Camera
             // btThem
             // 
             this.btThem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.Location = new System.Drawing.Point(666, 352);
+            this.btThem.Location = new System.Drawing.Point(666, 341);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 50);
             this.btThem.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace Camera
             // btTimKiem
             // 
             this.btTimKiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.Location = new System.Drawing.Point(560, 352);
+            this.btTimKiem.Location = new System.Drawing.Point(560, 341);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(100, 50);
             this.btTimKiem.TabIndex = 6;
@@ -164,29 +164,11 @@ namespace Camera
             this.label2.TabIndex = 22;
             this.label2.Text = "Tên camera:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(220, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 24);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Vị trí:";
-            // 
-            // txtViTri
-            // 
-            this.txtViTri.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtViTri.Location = new System.Drawing.Point(288, 249);
-            this.txtViTri.Name = "txtViTri";
-            this.txtViTri.Size = new System.Drawing.Size(796, 32);
-            this.txtViTri.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(196, 289);
+            this.label4.Location = new System.Drawing.Point(196, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 24);
             this.label4.TabIndex = 25;
@@ -195,11 +177,11 @@ namespace Camera
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(288, 287);
+            this.txtGhiChu.Location = new System.Drawing.Point(288, 248);
             this.txtGhiChu.Multiline = true;
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(796, 59);
-            this.txtGhiChu.TabIndex = 5;
+            this.txtGhiChu.Size = new System.Drawing.Size(796, 32);
+            this.txtGhiChu.TabIndex = 4;
             // 
             // menuStrip2
             // 
@@ -316,11 +298,33 @@ namespace Camera
             this.label7.TabIndex = 30;
             this.label7.Text = "RtspUrl:";
             // 
+            // txtMadonvihanhchinh
+            // 
+            this.txtMadonvihanhchinh.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMadonvihanhchinh.Location = new System.Drawing.Point(288, 287);
+            this.txtMadonvihanhchinh.Multiline = true;
+            this.txtMadonvihanhchinh.Name = "txtMadonvihanhchinh";
+            this.txtMadonvihanhchinh.Size = new System.Drawing.Size(796, 32);
+            this.txtMadonvihanhchinh.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(72, 295);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(210, 24);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Mã đơn vị hành chính:";
+            // 
             // QLCamera
             // 
+            this.AcceptButton = this.btThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 961);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtMadonvihanhchinh);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtRtspUrl);
             this.Controls.Add(this.label6);
@@ -328,8 +332,6 @@ namespace Camera
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtViTri);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTenCamera);
@@ -364,8 +366,6 @@ namespace Camera
         private System.Windows.Forms.TextBox txtTenCamera;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtViTri;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.MenuStrip menuStrip2;
@@ -382,5 +382,7 @@ namespace Camera
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtRtspUrl;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtMadonvihanhchinh;
+        private System.Windows.Forms.Label label8;
     }
 }

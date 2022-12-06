@@ -96,6 +96,7 @@
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrameRecievedEventArgs.cs" />
     <Compile Include="GiaoDien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +118,10 @@
     <Compile Include="QLDonvihanhchinh.Designer.cs">
       <DependentUpon>QLDonvihanhchinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="RtspFlags.cs" />
+    <Compile Include="RtspTransport.cs" />
+    <Compile Include="Stream.cs" />
+    <Compile Include="StreamFailedEventArgs.cs" />
     <Compile Include="TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
