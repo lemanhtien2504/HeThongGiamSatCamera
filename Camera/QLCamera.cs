@@ -65,13 +65,12 @@ namespace Camera
 
         private void btThem_Click(object sender, EventArgs e)
         {
-            string mysqlInsert = "INSERT INTO camera VALUES ('', @ten, @RtspUrl, @vitri, @ghichu)";
-            MySqlCommand command = new MySqlCommand(mysqlInsert, con);
-            
+            string mysqlInsert = "INSERT INTO camera VALUES (@ten, @RtspUrl, @ghichu, @idDonvihanhchinh)";
+            MySqlCommand command = new MySqlCommand(mysqlInsert, con);            
             command.Parameters.AddWithValue("ten", txtTenCamera.Text);
-            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);
-            command.Parameters.AddWithValue("vitri", txtViTri.Text);
+            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);            
             command.Parameters.AddWithValue("ghichu", txtGhiChu.Text);
+            command.Parameters.AddWithValue("idDonvihanhchinh", txtGhiChu.Text);
             command.ExecuteNonQuery();
             Xem();
         }
@@ -83,13 +82,13 @@ namespace Camera
 
         private void btSua_Click(object sender, EventArgs e)
         {
-            string mysqlUpdate = "UPDATE camera SET ten = @ten, RtspUrl = @RtspUrl, vitri = @vitri, ghichu = @ghichu WHERE id = @id";
+            string mysqlUpdate = "UPDATE camera SET ten = @ten, RtspUrl = @RtspUrl, ghichu = @ghichu, idDonvihanhchinh = @idDonvihanhchinh WHERE id = @id";
             MySqlCommand command = new MySqlCommand(mysqlUpdate, con);
             command.Parameters.AddWithValue("id", txtMa.Text);
             command.Parameters.AddWithValue("ten", txtTenCamera.Text);
-            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);
-            command.Parameters.AddWithValue("vitri", txtViTri.Text);
+            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);            
             command.Parameters.AddWithValue("ghichu", txtGhiChu.Text);
+            command.Parameters.AddWithValue("idDonvihanhchinh", txtGhiChu.Text);
             command.ExecuteNonQuery();
             Xem();
         }
@@ -100,22 +99,22 @@ namespace Camera
             MySqlCommand command = new MySqlCommand(mysqlDelete, con);
             command.Parameters.AddWithValue("id", txtMa.Text);
             command.Parameters.AddWithValue("ten", txtTenCamera.Text);
-            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);
-            command.Parameters.AddWithValue("vitri", txtViTri.Text);
+            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);            
             command.Parameters.AddWithValue("ghichu", txtGhiChu.Text);
+            command.Parameters.AddWithValue("idDonvihanhchinh", txtGhiChu.Text);
             command.ExecuteNonQuery();
             Xem();
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            string mysqlSearch = "SELECT * FROM camera WHERE id = @id OR ten = @ten OR RtspUrl = @RtspUrl OR vitri = @vitri OR ghichu = @ghichu";
+            string mysqlSearch = "SELECT * FROM camera WHERE id = @id OR ten = @ten OR RtspUrl = @RtspUrl OR ghichu = @ghichu, idDonvihanhchinh = @idDonvihanhchinh";
             MySqlCommand command = new MySqlCommand(mysqlSearch, con);
             command.Parameters.AddWithValue("id", txtMa.Text);
             command.Parameters.AddWithValue("ten", txtTenCamera.Text);
-            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);
-            command.Parameters.AddWithValue("vitri", txtViTri.Text);
+            command.Parameters.AddWithValue("RtspUrl", txtRtspUrl.Text);            
             command.Parameters.AddWithValue("ghichu", txtGhiChu.Text);
+            command.Parameters.AddWithValue("idDonvihanhchinh", txtGhiChu.Text);
             command.ExecuteNonQuery();
             MySqlDataReader reader = command.ExecuteReader();
             DataTable data = new DataTable();
@@ -163,9 +162,9 @@ namespace Camera
                 //Đưa dữ liệu vào textbox
                 txtMa.Text = row.Cells[0].Value.ToString();
                 txtTenCamera.Text = row.Cells[1].Value.ToString();
-                txtRtspUrl.Text = row.Cells[2].Value.ToString();
-                txtViTri.Text = row.Cells[3].Value.ToString();
-                txtGhiChu.Text = row.Cells[4].Value.ToString();
+                txtRtspUrl.Text = row.Cells[2].Value.ToString();                
+                txtGhiChu.Text = row.Cells[3].Value.ToString();
+                txtMadonvihanhchinh.Text = row.Cells[4].Value.ToString();
             }
         }
     }
